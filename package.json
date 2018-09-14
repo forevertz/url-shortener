@@ -1,0 +1,20 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "A simple URL shortener",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forevertz/url-shortener.git"
+  },
+  "keywords": [
+    "url",
+    "shortener",
+    "url-shortener",
+    "short-url"
+  ],
+  "author": "Improvertz",
+  "license": "MIT",
+  "scripts": {
+  }
+}
