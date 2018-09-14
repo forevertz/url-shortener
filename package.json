@@ -16,11 +16,18 @@
   "author": "Improvertz",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production node .",
-    "dev": "docker-compose -f docker-compose.dev.yml up -d && REDIS=//localhost:6379 node .",
+    "dev": "docker-compose -f docker-compose.dev.yml up -d && REDIS=//localhost:6379 micro-dev",
+    "start": "REDIS=${REDIS-//redis:6379} micro",
     "stop": "docker-compose -f docker-compose.dev.yml -f docker-compose.yml down"
   },
+  "dependencies": {
+    "micro": "^9.3.3",
+    "node-fetch": "^2.2.0",
+    "redis": "^2.8.0",
+    "validator": "^10.7.1"
+  },
   "devDependencies": {
+    "micro-dev": "^3.0.0",
     "prettier": "^1.14.2",
     "standard": "^12.0.1"
   }
