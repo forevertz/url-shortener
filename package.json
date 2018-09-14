@@ -18,7 +18,9 @@
   "scripts": {
     "dev": "docker-compose -f docker-compose.dev.yml up -d && REDIS=//localhost:6379 micro-dev",
     "start": "REDIS=${REDIS-//redis:6379} micro",
-    "stop": "docker-compose -f docker-compose.dev.yml -f docker-compose.yml down"
+    "stop": "docker-compose -f docker-compose.dev.yml -f docker-compose.yml down",
+    "docker:build": "docker build -t forevertz/url-shortener .",
+    "docker:publish": "docker tag forevertz/url-shortener forevertz/url-shortener:${TAG} && docker push forevertz/url-shortener:${TAG}"
   },
   "dependencies": {
     "micro": "^9.3.3",
